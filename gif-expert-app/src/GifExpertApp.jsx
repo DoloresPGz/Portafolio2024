@@ -3,13 +3,13 @@ import AddCategory from './components/AddCategory'
 const GifExpertApp = () => {
   const [categories, setCategories] = useState(['Sailor Moon'])
 
-  const onAddCategory = () => {
-    setCategories([...categories, 'Ouran Host Club'])
+  const onAddCategory = (newCategory) => {
+    setCategories([...categories, newCategory])
   }
   return (
     <>
       <h1>GifExpertApp</h1>
-      <AddCategory onAddCategory={setCategories} />
+      <AddCategory onAddCategory={onAddCategory} />
 
       <ol>
         {
